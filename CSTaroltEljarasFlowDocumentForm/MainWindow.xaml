@@ -1,0 +1,46 @@
+﻿<Window x:Class="CSTaroltEljarasFlowDocumentForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSTaroltEljarasFlowDocumentForm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="900">
+    <Grid>
+        <FlowDocumentScrollViewer Height="300" Width="800" VerticalAlignment="Top">
+            <FlowDocument ColumnWidth="400" x:Name="uiFlowDocument">
+                <Paragraph TextAlignment="Center">
+                    Tanuló objektum
+                </Paragraph>
+                <!--
+                <Section Background="GhostWhite" Name="section0">
+                    <BlockUIContainer BorderThickness="1" BorderBrush="Black">
+                        <WrapPanel x:Name="uiOuterWrapPanel" Orientation="Vertical" Width="750" Margin="0 12" HorizontalAlignment="Center">
+                            <WrapPanel Orientation="Horizontal" Margin="25 0 0 0">
+                                <Label Content="Vezetéknév: " Width="100"/>
+                                <TextBox x:Name="uiTextBoxVezetekNev" Width="250" Height="25"/>
+                                <Label Content="Keresztnév: " Width="100"/>
+                                <TextBox x:Name="uiTextBoxKeresztNev" Width="250" Height="25"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="25 12 0 0">
+                                <Label Content="Kor: " Width="100"></Label>
+                                <TextBox x:Name="uiTextBoxKor" Width="250" Height="25"/>
+                                <Label Content="Cím: " Width="100"/>
+                                <TextBox x:Name="uiTextBoxCim" Width="250" Height="25"/>
+                            </WrapPanel>
+                            <Button Click="AddNyelv" Tag="section0" Content="Nyelvek +" Width="100" Height="25" HorizontalAlignment="Left" Margin="25 12 0 0"></Button>
+                        </WrapPanel>
+                    </BlockUIContainer>
+                </Section>
+                -->
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <Button Click="AddTextBox" Width="400" HorizontalAlignment="Center" Height="25" Margin="0 125 0 0">Új Tanuló űrlap</Button>
+        <TextBox x:Name="uiTextBlock" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="AliceBlue" Width="600" HorizontalAlignment="Left" Height="150" Margin="50 325 0 12">
+
+        </TextBox>
+        <Button Click="ButtonAction" Width="150" Height="25" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 50 100">XML kiírása</Button>
+        <Button Click="SaveXml" Width="150" Height="25" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 50 75">XML mentése</Button>
+        <Button Click="XmlBetoltes" Width="150" Height="25" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50">XML betöltése</Button>
+    </Grid>
+</Window>
