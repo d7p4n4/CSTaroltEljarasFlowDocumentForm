@@ -151,8 +151,8 @@ namespace CSTaroltEljarasFlowDocumentForm
 
             uiTextBlock.Text = Ac4yUtility.GetAsXml(Kontener);
 
-            //UploadTanuloKontener(tanuloKontener);
-            //UploadKontenerTanuloAssociation(tanuloKontener);
+            UploadTanuloKontener(Kontener);
+            UploadKontenerTanuloAssociation(Kontener);
             
         }
 
@@ -339,7 +339,7 @@ namespace CSTaroltEljarasFlowDocumentForm
                         new Ac4yObjectObjectService(sqlConnection).SetByNames(
                             new SetByNamesRequest()
                             {
-                                TemplateName = "Metódus",
+                                TemplateName = "művelet",
                                 Name = muvelet.Leiras,
                             });
 
@@ -417,10 +417,10 @@ namespace CSTaroltEljarasFlowDocumentForm
                     new Ac4yAssociationObjectService(sqlConnection).SetByNames(
                         new Ac4yAssociationObjectService.SetByNamesRequest()
                         {
-                            AssociationPathName = "tárolt eljárás.Metódus",
+                            AssociationPathName = "tárolt eljárás.művelet",
                             OriginTemplateName = "tárolt eljárás",
                             OriginName = taroltEljaras.Megnevezes,
-                            TargetTemplateName = "Metódus",
+                            TargetTemplateName = "művelet",
                             TargetName = muvelet.Leiras
                         });
                 }                
